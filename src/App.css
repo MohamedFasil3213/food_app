@@ -1,0 +1,180 @@
+:root {
+  --black: rgb(0, 0, 0);
+  --white: rgb(255, 255, 255);
+  --red: rgb(239, 68, 68);
+  --orange: rgb(255, 133, 22);
+  --dark-orange: rgb(249, 115, 22);
+  --light-orange: rgb(254, 242, 232);
+  --light-blue: rgb(240, 243, 247);
+  --light-red: rgb(252, 224, 199);
+
+  --green-100: #DEF7EC;
+  --green-200: #BCF0DA;
+  --green-300: #84E1BC;
+  --green-400: #31C48D;
+  --green-500: #0E9F6E;
+  --green-600: #057A55;
+  --green-700: #046C4E;
+  --green-800: #03543f;
+  --green-900: #014737;
+
+  --transition: all 400ms ease;
+  --font-family: "Poppins", sans-serif;
+
+  --md-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+body {
+  background: var(--light-blue);
+  color: var(--black);
+  font-family: var(--font-family);
+  /* width: 100%;
+  height: 100vh;
+  overflow: hidden; */
+}
+
+.a-link {
+  color: var(--dark-orange);
+  transition: var(--transition);
+}
+
+.a-link:hover {
+  color: var(--orange);
+}
+
+input {
+  width: 100%;
+}
+
+/* ============= Buttons ===========  */
+.btn {
+  background-color: var(--orange);
+  color: var(--white);
+  font-size: 15px;
+  font-weight: 500;
+  padding: 8px 24px;
+  display: flex;
+  gap: 10px;
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background-color: var(--dark-orange);
+}
+
+.btn-danger {
+  background-color: var(--light-red);
+  color: var(--red);
+  font-size: 15px;
+  font-weight: 500;
+  padding: 8px 24px;
+  display: flex;
+  gap: 10px;
+  transition: var(--transition);
+}
+
+.btn-danger:hover {
+  background-color: var(--red);
+  color: var(--white);
+}
+
+.btn-light {
+  background-color: var(--light-red);
+  color: var(--dark-orange);
+  font-size: 15px;
+  font-weight: 500;
+  padding: 8px 24px;
+  display: flex;
+  gap: 10px;
+  transition: var(--transition);
+}
+
+.btn-light:hover {
+  background-color: var(--light-orange);
+  color: var(--orange);
+}
+
+/* ===== Text line-through =======  */
+.text-rotate-line-through:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 40%;
+  right: 0;
+  border-top: 1.5px solid white;
+  border-color: inherit;
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  transform: rotate(-25deg);
+}
+
+/* ===== Swiper Paination ====  */
+.swiper-pagination-bullet {
+  background: rgb(38, 146, 81) !important;
+  opacity: 0.8 !important;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active-main {
+  background: rgb(24, 114, 60) !important;
+  opacity: 1 !important;
+}
+
+/* ======= Footer Menu NavLink (width-1024px) Animation ========  */
+@keyframes ActiveFooterAnim {
+  0% {
+    opacity: 0;
+    left: -75px;
+  }
+
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .Footer_NavLink {
+    animation: ActiveFooterAnim 1s ease 0s 1 normal forwards;
+  }
+}
+
+/* ======= Footer Menu NavLink Active ========  */
+.Footer_NavLink a.active {
+  color: var(--blue-900);
+  scale: 1.1;
+  box-shadow: 0 5px 7px 7px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  background-color: var(--blue-900);
+}
+
+@media screen and (min-width:1024px) {
+  .Footer_NavLink a {
+    color: black;
+    display: block;
+    border-radius: 12px;
+    transition: var(--transition);
+  }
+}
+
+@media screen and (max-width:520px) {
+  .Footer_NavLink a {
+    color: black;
+    display: block;
+    border-radius: 12px;
+    transition: var(--transition);
+    padding: 6px;
+  }
+
+  .Footer_NavLink a:hover {
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  }
+
+  .Footer_NavLink a.active {
+    box-shadow: 0 5px 7px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    background-color: var(--blue-700);
+    color: var(--white);
+    scale: 1.1;
+
+  }
+}
