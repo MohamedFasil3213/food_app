@@ -38,3 +38,5 @@ Currently, two official plugins are available:
 
 5-Responsive Design:
    - Ensure the app is responsive for both mobile and desktop views
+
+   - step
